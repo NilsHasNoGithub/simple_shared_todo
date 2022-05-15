@@ -1,0 +1,23 @@
+[package]
+name = "simple_shared_todo_server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+prost = "0.10.3"
+serde = {version = "1.0.137", features=["derive"]}
+tokio = { version = "1.18.2", features = ["full"] }
+tonic = { version = "0.7.2", features = ["tls"] }
+clap = {version = "3.1.2", features = ["derive", "env"]}
+dotenv = "0.15.0"
+env_logger = "0.9.0"
+static_init = "1.0.2"
+log = "0.4.14"
+serde_json = "1.0.81"
+
+
+[build-dependencies]
+tonic-build = "0.7.2"
+

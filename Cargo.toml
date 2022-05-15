@@ -1,0 +1,7 @@
+[workspace]
+default-members = [
+    "simple_shared_todo_server"
+]
+members = [
+    "simple_shared_todo_server"
+]

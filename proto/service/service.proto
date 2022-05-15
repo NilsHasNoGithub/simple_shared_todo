@@ -1,0 +1,26 @@
+syntax = "proto3";
+package service;
+
+service TodoList {
+    rpc CreateItem (CreateItemRequest) returns (CreateItemResponse);
+}
+
+
+message CreateItemRequest {
+    string token = 1;
+    string title = 2;
+}
+
+message CreateItemResponse {
+    bool success = 1;
+    string item_id = 2;
+}
+
+
+message ItemInfo {
+    string title = 1;
+}
+
+message RequestItemsResponse {
+    repeated ItemInfo items = 1;
+}
